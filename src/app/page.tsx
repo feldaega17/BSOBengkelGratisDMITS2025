@@ -1,12 +1,9 @@
 "use client";
 
 import Button from "@/components/buttons/Button";
-import ButtonLink from "@/components/links/ButtonLink";
 import NextImage from "@/components/NextImage";
 import Typography from "@/components/Typography";
-import Image from "next/image";
 import Link from "next/link";
-import { IconBase } from "react-icons";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
