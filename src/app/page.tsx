@@ -1,12 +1,13 @@
 "use client";
 
-import Button from "@/components/buttons/Button";
-import NextImage from "@/components/NextImage";
-import Typography from "@/components/Typography";
+import { useEffect } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import NextImage from "@/components/NextImage";
+import Typography from "@/components/Typography";
+import Button from "@/components/buttons/Button";
 
 const testimonials = [
   {
