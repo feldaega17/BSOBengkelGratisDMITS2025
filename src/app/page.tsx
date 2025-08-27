@@ -171,20 +171,21 @@ export default function Home() {
             </div>
             <div className="flex justify-center flex-col mt-6 w-fit">
               <Button
-                className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white">
-                <a 
-                href="https://its.id/m/PENDAFTARAN_GRATIS2025" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                Daftar Services Gratis Sekarang!
-                </a>
-              </Button>
+                onClick={() => {
+                  window.location.href =
+                    "https://its.id/m/PENDAFTARAN_GRATIS2025";
+                }}
+                className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white"
+              ></Button>
 
               <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
               <div className="flex gap-4 w-full items-center justify-center">
-                <Button 
-                  onClick={() => window.open("https://wa.me/6285194924517", "_blank")}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button
+                  onClick={() => {
+                    window.location.href = "https://wa.me/6285194924517";
+                  }}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                >
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -194,9 +195,12 @@ export default function Home() {
                   />
                   CP BSO Bengkel Demits
                 </Button>
-                <Button 
-                  onClick={() => window.open("https://wa.me/6285606466522", "_blank")}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button
+                  onClick={() => {
+                    window.location.href = "https://wa.me/6285606466522";
+                  }}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                >
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -206,9 +210,12 @@ export default function Home() {
                   />
                   Erulia (Service Gratis)
                 </Button>
-                <Button 
-                  onClick={() => window.open("https://wa.me/6281261867562", "_blank")}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button
+                  onClick={() => {
+                    window.location.href = "https://wa.me/6281261867562";
+                  }}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                >
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -363,21 +370,28 @@ export default function Home() {
           className="flex bg-white h-fit w-screen relative px-24 pt-32 pb-64 overflow-hidden max-lg:hidden"
         >
           <div className="flex flex-col" data-aos="fade-up">
-          <Typography variant="h2" weight="bold" className="">
-            Syarat dan Ketentuan
-          </Typography>
-          <ol
-            className="list-decimal list-inside text-black ml-6 space-y-1 mt-4"
-            data-aos="fade-up"
-          >
-            <li>Sepeda motor Honda (matic dan bebek) tahun produksi 2016-2025</li>
-            <li>Mobil Toyota, Daihatsu, dan Honda tahun produksi 2010-2025</li>
-            <li>Membawa invoice saat registrasi</li>
-            <li>Wajib menunjukkan KTP dan STNK asli saat registrasi</li>
-            <li>Peserta tercepat dapat layanan ganti oli gratis</li>
-            <li>Suku cadang tersedia dengan harga transparan dan rekomendasi teknisi</li>
-          </ol>
-        </div>
+            <Typography variant="h2" weight="bold" className="">
+              Syarat dan Ketentuan
+            </Typography>
+            <ol
+              className="list-decimal list-inside text-black ml-6 space-y-1 mt-4"
+              data-aos="fade-up"
+            >
+              <li>
+                Sepeda motor Honda (matic dan bebek) tahun produksi 2016-2025
+              </li>
+              <li>
+                Mobil Toyota, Daihatsu, dan Honda tahun produksi 2010-2025
+              </li>
+              <li>Membawa invoice saat registrasi</li>
+              <li>Wajib menunjukkan KTP dan STNK asli saat registrasi</li>
+              <li>Peserta tercepat dapat layanan ganti oli gratis</li>
+              <li>
+                Suku cadang tersedia dengan harga transparan dan rekomendasi
+                teknisi
+              </li>
+            </ol>
+          </div>
 
           <NextImage
             className="absolute -bottom-16 right-0"
