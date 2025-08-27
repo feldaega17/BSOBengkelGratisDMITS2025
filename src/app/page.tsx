@@ -176,7 +176,10 @@ export default function Home() {
                     "https://its.id/m/PENDAFTARAN_GRATIS2025";
                 }}
                 className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white"
-              ></Button>
+              >
+                {" "}
+                Daftar Servies Gratis Sekarang!
+              </Button>
 
               <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
               <div className="flex gap-4 w-full items-center justify-center">
