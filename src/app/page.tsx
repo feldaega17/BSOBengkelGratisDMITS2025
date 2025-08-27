@@ -541,7 +541,7 @@ export default function Home() {
           <div className="flex gap-4 w-full items-center justify-center text-black">
             <Link
               className="bg-transparent flex gap-1"
-              href="/daftar"
+              href="https://www.instagram.com/bengkeldemits"
               data-aos="fade-right"
             >
               <NextImage
@@ -555,7 +555,7 @@ export default function Home() {
             </Link>
             <Link
               className="bg-transparent flex gap-1"
-              href="/daftar"
+              href="https://www.tiktok.com/@bengkeldemits"
               data-aos="fade-right"
             >
               <NextImage
