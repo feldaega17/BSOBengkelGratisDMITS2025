@@ -171,7 +171,6 @@ export default function Home() {
             </div>
             <div className="flex justify-center flex-col mt-6 w-fit">
               <Button
-               asChild
                 className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white">
                 <a 
                 href="https://its.id/m/PENDAFTARAN_GRATIS2025" 
