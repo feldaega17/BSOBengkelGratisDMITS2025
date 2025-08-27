@@ -30,7 +30,8 @@ export default function BengkelPage() {
           <div className="flex justify-center flex-col mt-6 w-fit ">
             <Button 
               onClick={() => {
-                window.location.href = "https://linktr.ee/BSO_BENGKEL_HMDMITS?fbclid=PAZXh0bgNhZW0CMTEAAaf7-SnyExActRG1JLes26GLgbJMVkclJ_4fcsK9LHNLfIMSLUAzrsxibL2wVg_aem_1OWAVQR29J34_Nhx6L3LOw";
+                window.location.href = 
+                  "https://linktr.ee/BSO_BENGKEL_HMDMITS?fbclid=PAZXh0bgNhZW0CMTEAAaf7-SnyExActRG1JLes26GLgbJMVkclJ_4fcsK9LHNLfIMSLUAzrsxibL2wVg_aem_1OWAVQR29J34_Nhx6L3LOw";
               }}
               className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white "
             >
@@ -48,7 +49,8 @@ export default function BengkelPage() {
             <div className="flex gap-4 w-full items-center justify-center max-lg:flex-col">
               <Button 
                  onClick={() => {
-                window.location.href = "https://www.instagram.com/bengkeldemits/";
+                window.location.href = 
+                  "https://www.instagram.com/bengkeldemits/";
               }}
                 className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
@@ -63,7 +65,8 @@ export default function BengkelPage() {
               </Button>
               <Button 
                 onClick={() => {
-                window.location.href = "https://www.tiktok.com/@bengkeldemits";
+                window.location.href = 
+                  "https://www.tiktok.com/@bengkeldemits";
               }}
                 className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
@@ -78,7 +81,8 @@ export default function BengkelPage() {
               </Button>
               <Button 
                  onClick={() => {
-                window.location.href = "https://wa.me/6285194924517";
+                window.location.href = 
+                  "https://wa.me/6285194924517";
                 }}
                 className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
                 <NextImage
