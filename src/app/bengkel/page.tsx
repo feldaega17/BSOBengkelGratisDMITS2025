@@ -49,7 +49,17 @@ export default function BengkelPage() {
                   src={"/icon-instagram.png"}
                   className=""
                 />
-                Bengkel Demits
+                @bengkeldemits
+              </Button>
+              <Button className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <NextImage
+                  alt="bengkeldemits-logo"
+                  width={24}
+                  height={24}
+                  src={"/icon-tiktok.png"}
+                  className=""
+                />
+                @bengkeldemits
               </Button>
               <Button className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
                 <NextImage
