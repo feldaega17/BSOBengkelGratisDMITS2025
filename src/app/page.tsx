@@ -11,12 +11,12 @@ import Button from "@/components/buttons/Button";
 
 const testimonials = [
   {
-    text: "Tim yang profesional dan ramah membuat pengalaman saya sangat menyenangkan.",
-    name: "John Doe",
+    text: "Acara ini sangat bermanfaat. Semoga selalu konsisten.",
+    name: "Wikan",
   },
   {
-    text: "Pelayanan sangat cepat dan hasilnya memuaskan. Terima kasih Bengkel Demits!",
-    name: "Siti Aminah",
+    text: "Sudah bagus, mungkin bisa menangani kerusakan major di event selanjutnya dan pembagian shift makan siang.",
+    name: "Maya",
   },
   {
     text: "Saya sangat merekomendasikan acara ini untuk semua pemilik kendaraan di ITS.",
@@ -28,7 +28,7 @@ const testimonials = [
   },
   {
     text: "Acara yang sangat bermanfaat dan gratis! Semoga terus diadakan setiap tahun.",
-    name: "Dewi Lestari",
+    name: "Wirawan",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function Home() {
             src={"/logo-services.png"}
             className="mr-2"
           />
-          <div className="text-white text-base">BENGKEL DEMITS</div>
+          <div className="text-white text-base">SERVICE GRATIS 2025</div>
         </div>
         <div className="flex items-center">
           <a
@@ -163,19 +163,29 @@ export default function Home() {
                 weight="bold"
                 className="relative z-10 text-white max-lg:text-2xl"
               >
-                SERVICES GRATIS 2025
+                SERVICE GRATIS 2025
               </Typography>
               <Typography variant="h4" className="relative z-10 text-white">
                 BSO Bengkel DTMI ITS
               </Typography>
             </div>
             <div className="flex justify-center flex-col mt-6 w-fit">
-              <Button className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white ">
+              <Button
+               asChild
+                className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white">
+                <a 
+                href="https://its.id/m/PENDAFTARAN_GRATIS2025" 
+                target="_blank" 
+                rel="noopener noreferrer">
                 Daftar Services Gratis Sekarang!
+                </a>
               </Button>
+
               <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
               <div className="flex gap-4 w-full items-center justify-center">
-                <Button className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button 
+                  onClick={() => window.open("https://wa.me/6285194924517", "_blank")}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -183,9 +193,11 @@ export default function Home() {
                     src={"/icon-whatsapp.png"}
                     className=""
                   />
-                  Bengkel Demits
+                  CP BSO Bengkel Demits
                 </Button>
-                <Button className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button 
+                  onClick={() => window.open("https://wa.me/6285606466522", "_blank")}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -193,9 +205,11 @@ export default function Home() {
                     src={"/icon-whatsapp.png"}
                     className=""
                   />
-                  Eurelia (Service Gratis)
+                  Erulia (Service Gratis)
                 </Button>
-                <Button className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
+                <Button 
+                  onClick={() => window.open("https://wa.me/6281261867562", "_blank")}
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto">
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
@@ -247,7 +261,7 @@ export default function Home() {
 
           <div className="mt-6" data-aos="fade-up">
             <Typography variant="h5" weight="bold" className="text-black ">
-              Testimoni Bengkel Demits
+              Kritik & Saran Service Gratis 2024
             </Typography>
           </div>
 
@@ -350,28 +364,22 @@ export default function Home() {
           className="flex bg-white h-fit w-screen relative px-24 pt-32 pb-64 overflow-hidden max-lg:hidden"
         >
           <div className="flex flex-col" data-aos="fade-up">
-            <Typography variant="h2" weight="bold" className="">
-              Syarat dan Ketentuan
-            </Typography>
-            <ul
-              className="list-disc list-inside text-black ml-6 space-y-1 mt-4"
-              data-aos="fade-up"
-            >
-              <li>
-                Sepeda motor Honda (matic dan bebek) tahun produksi 2016-2025
-              </li>
-              <li>
-                Mobil Toyota, Daihatsu, dan Honda tahun produksi 2010-2025
-              </li>
-              <li>Membawa invoice saat registrasi</li>
-              <li>Wajib menunjukkan KTP dan STNK asli saat registrasi</li>
-              <li>Peserta tercepat dapat layanan ganti oli gratis</li>
-              <li>
-                Suku cadang tersedia dengan harga transparan dan rekomendasi
-                teknisi
-              </li>
-            </ul>
-          </div>
+          <Typography variant="h2" weight="bold" className="">
+            Syarat dan Ketentuan
+          </Typography>
+          <ol
+            className="list-decimal list-inside text-black ml-6 space-y-1 mt-4"
+            data-aos="fade-up"
+          >
+            <li>Sepeda motor Honda (matic dan bebek) tahun produksi 2016-2025</li>
+            <li>Mobil Toyota, Daihatsu, dan Honda tahun produksi 2010-2025</li>
+            <li>Membawa invoice saat registrasi</li>
+            <li>Wajib menunjukkan KTP dan STNK asli saat registrasi</li>
+            <li>Peserta tercepat dapat layanan ganti oli gratis</li>
+            <li>Suku cadang tersedia dengan harga transparan dan rekomendasi teknisi</li>
+          </ol>
+        </div>
+
           <NextImage
             className="absolute -bottom-16 right-0"
             width={630}
@@ -394,7 +402,7 @@ export default function Home() {
                 weight="bold"
                 className="text-white mx-8 inline-block"
               >
-                BENGKEL DEMITS 2025
+                SERVICE GRATIS 2025
               </Typography>
             ))}
           </div>
