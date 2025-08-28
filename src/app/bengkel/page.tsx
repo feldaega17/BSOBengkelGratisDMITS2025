@@ -35,7 +35,7 @@ export default function BengkelPage() {
               }}
               className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white "
             >
-              Servis Harian Bengkel
+              Service Harian Bengkel
             </Button>
             <Button
               onClick={() => {
@@ -43,7 +43,7 @@ export default function BengkelPage() {
               }}
               className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white "
             >
-              Servis Gratis
+              Service Gratis
             </Button>
             <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
             <div className="flex gap-4 w-full items-center justify-center max-lg:flex-col max-lg:w-full">

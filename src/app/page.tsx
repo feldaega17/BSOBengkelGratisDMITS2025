@@ -125,7 +125,16 @@ export default function Home() {
             </div>
             {/* Desktop WhatsApp Button */}
             <div className="max-lg:hidden">
-              <Button className="border-white bg-transparent text-white  py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white ">
+              <Button
+                onClick={() => {
+                  window.open(
+                    "https://wa.me/6285194924517",
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                }}
+                className="border-white bg-transparent text-white  py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white "
+              >
                 <NextImage
                   alt="bengkeldemits-logo"
                   width={20}
@@ -178,7 +187,16 @@ export default function Home() {
                 >
                   Informasi Tambahan
                 </a>
-                <Button className="border-white bg-transparent text-white py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white w-full max-lg:w-3/4 mt-2">
+                <Button
+                  onClick={() => {
+                    window.open(
+                      "https://wa.me/6285194924517",
+                      "_blank",
+                      "noopener,noreferrer",
+                    );
+                  }}
+                  className="border-white bg-transparent text-white py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white w-full max-lg:w-3/4 mt-2"
+                >
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={20}
@@ -252,7 +270,7 @@ export default function Home() {
                 className="bg-white border-0 hover:border-0 text-black mt-6 py-4 px-20 max-lg:px-5 font-bold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white"
               >
                 {" "}
-                Daftar Servies Gratis Sekarang!
+                Daftar Service Gratis Sekarang!
               </Button>
 
               <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
@@ -305,7 +323,8 @@ export default function Home() {
               </div>
               <Button
                 onClick={() => {
-                  window.location.href = "";
+                  window.location.href =
+                    "https://maps.app.goo.gl/PtJB4DPjgGPZhUo39";
                 }}
                 className="border-white w-full mt-6 bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full  gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
               >
