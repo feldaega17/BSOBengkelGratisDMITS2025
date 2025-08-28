@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
-import { useEffect } from "react";
 import "aos/dist/aos.css";
 
 import NextImage from "@/components/NextImage";
@@ -80,57 +80,131 @@ export default function Home() {
   }, []);
   return (
     <>
-      <nav className="w-full fixed z-30 flex justify-between items-center py-4 px-6 bg-black">
-        <div className="flex items-center justify-center">
-          <NextImage
-            alt="logo"
-            width={40}
-            height={40}
-            src={"/logo-services.png"}
-            className="mr-2"
-          />
-          <div className="text-white text-base">SERVICE GRATIS 2025</div>
-        </div>
-        <div className="flex items-center">
-          <a
-            href="#tentang"
-            className="text-white mx-4 text-base cursor-pointer"
-          >
-            Tentang Acara
-          </a>
-          <a
-            href="#pelayanan"
-            className="text-white mx-4 text-base cursor-pointer"
-          >
-            Pelayanan
-          </a>
-          <a
-            href="#syarat"
-            className="text-white mx-4 text-base cursor-pointer"
-          >
-            Syarat
-          </a>
-          <a
-            href="#informasi"
-            className="text-white mx-4 text-base cursor-pointer"
-          >
-            Informasi Tambahan
-          </a>
-        </div>
-        <Button className="border-white bg-transparent text-white  py-2 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-sm max-lg:text-sm hover:bg-red-700 hover:text-white ">
-          <NextImage
-            alt="bengkeldemits-logo"
-            width={20}
-            height={20}
-            src={"/icon-whatsapp.png"}
-            className="text-base"
-          />
-          Bengkel Demits
-        </Button>
-      </nav>
+      {/* Responsive Navbar with Hamburger for mobile */}
+      {(() => {
+        const [menuOpen, setMenuOpen] = React.useState(false);
+
+        return (
+          <nav className="w-full fixed z-30 flex justify-between items-center py-4 px-6 bg-black">
+            <div className="flex items-center justify-center">
+              <NextImage
+                alt="logo"
+                width={40}
+                height={40}
+                src={"/logo-services.png"}
+                className="mr-2"
+              />
+              <div className="text-white text-base">SERVICE GRATIS 2025</div>
+            </div>
+            {/* Desktop nav links */}
+            <div className="flex items-center max-lg:hidden">
+              <a
+                href="#tentang"
+                className="text-white mx-4 text-base cursor-pointer"
+              >
+                Tentang Acara
+              </a>
+              <a
+                href="#pelayanan"
+                className="text-white mx-4 text-base cursor-pointer"
+              >
+                Pelayanan
+              </a>
+              <a
+                href="#syarat"
+                className="text-white mx-4 text-base cursor-pointer"
+              >
+                Syarat
+              </a>
+              <a
+                href="#informasi"
+                className="text-white mx-4 text-base cursor-pointer"
+              >
+                Informasi Tambahan
+              </a>
+            </div>
+            {/* Desktop WhatsApp Button */}
+            <div className="max-lg:hidden">
+              <Button className="border-white bg-transparent text-white  py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white ">
+                <NextImage
+                  alt="bengkeldemits-logo"
+                  width={20}
+                  height={20}
+                  src={"/icon-whatsapp.png"}
+                  className="text-base "
+                />
+                Bengkel Demits
+              </Button>
+            </div>
+            {/* Hamburger icon for mobile */}
+            <button
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 text-white focus:outline-none"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Toggle menu"
+              type="button"
+            >
+              <span className="block w-6 h-0.5 bg-white mb-1"></span>
+              <span className="block w-6 h-0.5 bg-white mb-1"></span>
+              <span className="block w-6 h-0.5 bg-white"></span>
+            </button>
+            {/* Mobile menu dropdown */}
+            {menuOpen && (
+              <div className="absolute top-full left-0 w-full bg-black flex flex-col items-center py-4 gap-2 shadow-lg lg:hidden animate-fade-in z-40">
+                <a
+                  href="#tentang"
+                  className="text-white text-base py-2 w-full text-center hover:bg-red-700"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Tentang Acara
+                </a>
+                <a
+                  href="#pelayanan"
+                  className="text-white text-base py-2 w-full text-center hover:bg-red-700"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Pelayanan
+                </a>
+                <a
+                  href="#syarat"
+                  className="text-white text-base py-2 w-full text-center hover:bg-red-700"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Syarat
+                </a>
+                <a
+                  href="#informasi"
+                  className="text-white text-base py-2 w-full text-center hover:bg-red-700"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Informasi Tambahan
+                </a>
+                <Button className="border-white bg-transparent text-white py-2 px-6 gap-2 justify-center items-center font-semibold text-sm hover:bg-red-700 hover:text-white w-full max-lg:w-3/4 mt-2">
+                  <NextImage
+                    alt="bengkeldemits-logo"
+                    width={20}
+                    height={20}
+                    src={"/icon-whatsapp.png"}
+                    className="text-base"
+                  />
+                  Bengkel Demits
+                </Button>
+              </div>
+            )}
+            <style>{`
+              @keyframes fade-in {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+              .animate-fade-in {
+                animation: fade-in 0.2s ease;
+              }
+            `}</style>
+          </nav>
+        );
+      })()}
       <main className="flex h-full flex-col overflow-x-hidden">
         {/* Section 1 */}
-        <section className="section-1 relative h-screen w-screen overflow-hidden flex flex-col justify-center items-center">
+        <section className="section-1 relative h-screen w-screen overflow-hidden max-lg:pb-10 max-lg:h-full max-lg:pt-24 flex flex-col justify-center items-center">
           <NextImage
             alt="bg-image"
             width={1920}
@@ -161,7 +235,7 @@ export default function Home() {
               <Typography
                 variant="h1"
                 weight="bold"
-                className="relative z-10 text-white max-lg:text-2xl"
+                className="relative z-10 text-white max-lg:text-2xl text-center"
               >
                 SERVICE GRATIS 2025
               </Typography>
@@ -182,19 +256,19 @@ export default function Home() {
               </Button>
 
               <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
-              <div className="flex gap-4 w-full items-center justify-center">
+              <div className="flex gap-4 w-full items-center justify-center max-lg:flex-col max-lg:w-full">
                 <Button
                   onClick={() => {
                     window.location.href = "https://wa.me/6285194924517";
                   }}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                  className="border-white bg-transparent text-white max-lg:w-full     py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
                   <NextImage
                     alt="bengkeldemits-logo"
                     width={24}
                     height={24}
                     src={"/icon-whatsapp.png"}
-                    className=""
+                    className=" "
                   />
                   CP BSO Bengkel Demits
                 </Button>
@@ -202,7 +276,7 @@ export default function Home() {
                   onClick={() => {
                     window.location.href = "https://wa.me/6285606466522";
                   }}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full  gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
                   <NextImage
                     alt="bengkeldemits-logo"
@@ -217,7 +291,7 @@ export default function Home() {
                   onClick={() => {
                     window.location.href = "https://wa.me/6281261867562";
                   }}
-                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                  className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
                   <NextImage
                     alt="bengkeldemits-logo"
@@ -229,6 +303,21 @@ export default function Home() {
                   Alfattah (Service Gratis)
                 </Button>
               </div>
+              <Button
+                onClick={() => {
+                  window.location.href = "";
+                }}
+                className="border-white w-full mt-6 bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full  gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+              >
+                <NextImage
+                  alt="bengkeldemits-logo"
+                  width={24}
+                  height={24}
+                  src={"/icon-location.png"}
+                  className=""
+                />
+                Lokasi Bengkel Demits
+              </Button>
             </div>
           </div>
         </section>
@@ -238,20 +327,27 @@ export default function Home() {
           id="tentang"
           className="flex flex-col h-screen w-screen gap-10 items-center justify-center bg-white max-lg:h-full "
         >
-          <div className="flex w-3/4 gap-6 ">
+          <div className="flex w-3/4 max-lg:w-full max-lg:px-6 max-lg:py-6 gap-6 max-lg:flex-col">
             <NextImage
               alt="bg-image"
               width={460}
               height={410}
               src={"/tentang-image.png"}
-              className=""
+              className="max-lg:w-full"
               data-aos="fade-right"
             />
-            <div className="w-3/4 flex flex-col gap-2 " data-aos="fade-right">
-              <Typography variant="h4" weight="bold" className="text-black">
+            <div
+              className="w-3/4 max-lg:w-full flex flex-col gap-2 "
+              data-aos="fade-right"
+            >
+              <Typography
+                variant="h4"
+                weight="bold"
+                className="text-black max-lg:text-4xl"
+              >
                 Tentang Acara
               </Typography>
-              <Typography variant="p" className="text-gray-600">
+              <Typography variant="p" className="text-gray-600 text-justify">
                 Service Gratis merupakan Big Event tahunan yang diselenggarakan
                 oleh BSO Bengkel Himpunan Mahasiswa Departemen Teknik Mesin
                 Industri ITS. Kegiatan ini menjadi perwujudan konkret dari
@@ -268,8 +364,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-6" data-aos="fade-up">
-            <Typography variant="h5" weight="bold" className="text-black ">
+          <div className="mt-6 max-lg:mt-0" data-aos="fade-up">
+            <Typography
+              variant="h5"
+              weight="bold"
+              className="text-black max-lg:text-2xl max-lg:px-6 max-lg:text-center"
+            >
               Kritik & Saran Service Gratis 2024
             </Typography>
           </div>
@@ -281,20 +381,20 @@ export default function Home() {
         {/* Section 3 */}
         <div
           id="pelayanan"
-          className="h-screen w-screen relative bg-white items-center flex flex-col justify-center max-lg:hidden"
+          className="h-screen w-screen max-lg:h-full max-lg:pt-10 relative bg-white items-center flex flex-col justify-center "
         >
           <Typography
             variant="h3"
             weight="bold"
-            className="text-black"
+            className="text-black max-lg:text-3xl"
             data-aos="fade-left"
           >
             Pelayanan
           </Typography>
-          <div className="flex mt-6 gap-6">
+          <div className="flex mt-6 gap-6 max-lg:flex-col">
             {/* Services Mobil */}
             <div
-              className="bg-red-600 h-[480px] flex gap-2 flex-col px-5 py-6 rounded-lg"
+              className="bg-red-600 h-[480px] max-lg:h-[400px]  flex gap-2 flex-col px-5 py-6 rounded-lg"
               data-aos="fade-up"
             >
               <NextImage
@@ -319,7 +419,7 @@ export default function Home() {
             </div>
             {/* Services Motor */}
             <div
-              className="bg-red-600 h-[480px] flex gap-2 flex-col px-5 py-6 rounded-lg"
+              className="bg-red-600 h-[480px] flex gap-2 max-lg:h-[400px]  flex-col px-5 py-6 rounded-lg"
               data-aos="fade-up"
             >
               <NextImage
@@ -344,7 +444,7 @@ export default function Home() {
             </div>
             {/* Cuci Kendaraan */}
             <div
-              className="bg-red-600 h-[480px] flex gap-2 flex-col px-5 py-6 rounded-lg"
+              className="bg-red-600 h-[480px] max-lg:h-[380px] flex gap-2 flex-col px-5 py-6 rounded-lg"
               data-aos="fade-up"
             >
               <NextImage
@@ -370,10 +470,10 @@ export default function Home() {
         {/* Section 4 */}
         <div
           id="syarat"
-          className="flex bg-white h-fit w-screen relative px-24 pt-32 pb-64 overflow-hidden max-lg:hidden"
+          className="flex bg-white h-fit w-screen relative px-24 max-lg:px-6 max-lg:pt-10 pt-32 pb-64 overflow-hidden"
         >
           <div className="flex flex-col" data-aos="fade-up">
-            <Typography variant="h2" weight="bold" className="">
+            <Typography variant="h2" weight="bold" className="max-lg:text-2xl">
               Syarat dan Ketentuan
             </Typography>
             <ol
@@ -397,7 +497,7 @@ export default function Home() {
           </div>
 
           <NextImage
-            className="absolute -bottom-16 right-0"
+            className="absolute -bottom-16 right-0 max-lg:w-72 max-lg:-bottom-4"
             width={630}
             height={412}
             alt="logo-demits"
@@ -406,7 +506,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="bg-red-700 w-full overflow-x-hidden py-2 max-lg:hidden">
+        <div className="bg-red-700 w-full overflow-x-hidden py-2 ">
           <div
             className="flex items-center animate-banner-marquee whitespace-nowrap"
             style={{ width: "max-content" }}
@@ -416,7 +516,7 @@ export default function Home() {
                 key={idx}
                 variant="h3"
                 weight="bold"
-                className="text-white mx-8 inline-block"
+                className="text-white mx-8 inline-block max-lg:text-3xl"
               >
                 SERVICE GRATIS 2025
               </Typography>
@@ -434,14 +534,18 @@ export default function Home() {
         </div>
 
         {/* Section 5 */}
-        <div id="informasi" className="flex bg-white justify-center">
-          <div className="flex flex-col items-center justify-center bg-white py-10 px-6 gap-4">
+        <div
+          id="informasi"
+          className="flex max-lg:flex-col   bg-white justify-center"
+        >
+          <div className="flex flex-col max-lg:px-6 items-center justify-center bg-white py-10 max-lg:py-4 max-lg:gap-2 px-6 gap-4">
             <NextImage
               alt=""
               src={"/denah-image.png"}
               width={420}
               height={225}
               data-aos="fade-right"
+              className="max-lg:w-full"
             />
             <NextImage
               alt=""
@@ -449,12 +553,13 @@ export default function Home() {
               width={420}
               height={225}
               data-aos="fade-right"
+              className="max-lg:w-full"
             />
           </div>
-          <div className="py-10 px-6 w-1/2">
+          <div className="py-10 px-6 w-1/2 max-lg:w-full max-lg:py-4">
             <Typography
               variant="h3"
-              className="text-black"
+              className="text-black max-lg:text-3xl"
               weight="bold"
               data-aos="fade-up"
             >
@@ -473,16 +578,28 @@ export default function Home() {
               mahasiswa Teknik Mesin Industri berpengalaman, didampingi oleh
               dosen pembimbing ahli.
             </Typography>
-            <div className="mt-8" data-aos="fade-up">
-              <Typography variant="p" weight="medium">
+            <div className="mt-8 max-lg:mt-4" data-aos="fade-up">
+              <Typography
+                variant="p"
+                weight="medium"
+                className="max-lg:text-xl"
+              >
                 Pelaksanaan Acara
               </Typography>
-              <Typography variant="h5" weight="bold">
+              <Typography
+                variant="h5"
+                weight="bold"
+                className="max-lg:text-2xl"
+              >
                 13 - 14 September 2025
               </Typography>
             </div>
             <div className="mt-6" data-aos="fade-up">
-              <Typography variant="h5" weight="medium">
+              <Typography
+                variant="h5"
+                weight="medium"
+                className="max-lg:text-xl"
+              >
                 Fasilitas Penunjang
               </Typography>
               <ul className="list-disc list-inside text-black ml-6 space-y-1 ">
@@ -497,10 +614,10 @@ export default function Home() {
         </div>
 
         {/* Section 6 */}
-        <div className="h-screen w-screen bg-white flex flex-col items-center justify-center">
+        <div className="h-screen w-screen max-lg:h-full max-lg:py-4 bg-white flex flex-col items-center justify-center">
           <Typography
             variant="h4"
-            className="text-red-600"
+            className="text-red-600 max-lg:text-3xl"
             weight="bold"
             data-aos="fade-up"
           >
@@ -512,10 +629,11 @@ export default function Home() {
             width={484}
             height={161}
             data-aos="fade-up"
+            className="max-lg:w-3/4"
           />
           <Typography
             variant="p"
-            className="text-gray-600 w-1/2 text-center mt-6"
+            className="text-gray-600 w-1/2 max-lg:w-full max-lg:px-4 text-center mt-6"
             weight="medium"
             data-aos="fade-right"
           >
@@ -525,10 +643,10 @@ export default function Home() {
             berpengalaman.
           </Typography>
           <div
-            className="w-1/2 flex justify-center items-center gap-4 my-6"
+            className="w-1/2 max-lg:w-full flex justify-center items-center gap-4 my-6 max-lg:mx-2"
             data-aos="fade-up"
           >
-            <hr className="border-black my-4 border-2 w-full" />
+            <hr className="border-black my-4 border-2 max-lg:border-1 w-full" />
             <Typography
               variant="p"
               weight="semibold"
@@ -536,7 +654,7 @@ export default function Home() {
             >
               Social Media
             </Typography>
-            <hr className="border-black my-4 border-2 w-full" />
+            <hr className="border-black my-4 border-2 max-lg:border-1 w-full" />
           </div>
           <div className="flex gap-4 w-full items-center justify-center text-black">
             <Link
@@ -572,7 +690,7 @@ export default function Home() {
 
         <div className="bg-white px-8 pb-10">
           <hr className="border-gray-400 my-4 border-1 w-full" />
-          <div className="text-sm text-black">
+          <div className="text-sm max-lg:text-xs text-black">
             © SERVICE GRATIS 2025. BSO BENGKEL DEMITS
           </div>
         </div>

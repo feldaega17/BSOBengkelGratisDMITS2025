@@ -9,10 +9,13 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Nextjs Starter Template",
-    template: "%s | Nextjs Starter Template",
+    default: "Bengkel Demits",
+    template: "%s | Bengkel Demits",
   },
-  description: "Nextjs 14.2.1 + Tailwind CSS starter template",
+  icons: {
+    icon: "/favicon.ico", // Path in the public folder
+  },
+  description: "Bengkel Demits - Layanan Perbaikan Kendaraan Gratis",
 };
 
 export default function RootLayout({

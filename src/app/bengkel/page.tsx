@@ -23,11 +23,11 @@ export default function BengkelPage() {
               width={403}
               height={383}
               src={"/sticker-bengkel-demits.png"}
-              className="w-full max-lg:w-24"
+              className="w-full max-lg:w-72"
             />
           </div>
 
-          <div className="flex justify-center flex-col mt-6 w-fit ">
+          <div className="flex justify-center flex-col mt-6 w-fit max-lg:w-full ">
             <Button
               onClick={() => {
                 window.location.href =
@@ -46,13 +46,13 @@ export default function BengkelPage() {
               Servis Gratis
             </Button>
             <hr className="my-6 border-t-2 border-white opacity-50 w-full" />
-            <div className="flex gap-4 w-full items-center justify-center max-lg:flex-col">
+            <div className="flex gap-4 w-full items-center justify-center max-lg:flex-col max-lg:w-full">
               <Button
                 onClick={() => {
                   window.location.href =
                     "https://www.instagram.com/bengkeldemits/";
                 }}
-                className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                className="border-white bg-transparent text-white max-lg:w-full  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
               >
                 <NextImage
                   alt="bengkeldemits-logo"
@@ -68,7 +68,7 @@ export default function BengkelPage() {
                   window.location.href =
                     "https://www.tiktok.com/@bengkeldemits";
                 }}
-                className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                className="border-white bg-transparent text-white max-lg:w-full  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
               >
                 <NextImage
                   alt="bengkeldemits-logo"
@@ -83,7 +83,7 @@ export default function BengkelPage() {
                 onClick={() => {
                   window.location.href = "https://wa.me/6285194924517";
                 }}
-                className="border-white bg-transparent text-white  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
+                className="border-white bg-transparent text-white max-lg:w-full  py-3 px-10 max-lg:px-5 gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
               >
                 <NextImage
                   alt="bengkeldemits-logo"
