@@ -307,7 +307,7 @@ export default function Home() {
                 </Button>
                 <Button
                   onClick={() => {
-                    window.location.href = "https://wa.me/6281261867562";
+                    window.location.href = "https://wa.me/6289509429714";
                   }}
                   className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
@@ -318,7 +318,7 @@ export default function Home() {
                     src={"/icon-whatsapp.png"}
                     className=""
                   />
-                  Alfattah (Service Gratis)
+                  Ichwan (Service Gratis)
                 </Button>
               </div>
               <Button
