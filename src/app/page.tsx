@@ -292,7 +292,7 @@ export default function Home() {
                 </Button>
                 <Button
                   onClick={() => {
-                    window.location.href = "https://wa.me/6285606466522";
+                    window.location.href = "https://wa.me/6287834944687";
                   }}
                   className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full  gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
@@ -303,11 +303,11 @@ export default function Home() {
                     src={"/icon-whatsapp.png"}
                     className=""
                   />
-                  Erulia (Service Gratis)
+                  Diva (Service Gratis)
                 </Button>
                 <Button
                   onClick={() => {
-                    window.location.href = "https://wa.me/6289509429714";
+                    window.location.href = "https://wa.me/6282333207586";
                   }}
                   className="border-white bg-transparent text-white  py-3 px-6 max-lg:px-5 max-lg:w-full gap-2 justify-center items-center font-semibold text-2xl max-lg:text-base hover:bg-red-700 hover:text-white mx-auto"
                 >
@@ -318,7 +318,7 @@ export default function Home() {
                     src={"/icon-whatsapp.png"}
                     className=""
                   />
-                  Ichwan (Service Gratis)
+                  Mahesa (Service Gratis)
                 </Button>
               </div>
               <Button
